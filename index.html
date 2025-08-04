@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List Web Application</title>
+    <script src="https://kit.fontawesome.com/9a1fcea83c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="to-do-container">
+
+        <div id="default-design">
+            <div class="icons">
+                <i class="fa-solid fa-list-check" id="list-icon"></i>
+                <div id="imaginary-list-icon"></div>
+            </div>
+            <p id="no-task-p">No tasks here yet</p>
+        </div>
+
+        <ul id="list-items">
+        
+        </ul>
+        
+        <div id="new-task-input-area">
+            <div class="just-icons">
+                <i class="fa-regular fa-square" id="input-area-icon"></i>
+                <input type="text" id="text-input" autofocus >
+            </div>
+            
+            <button type="button" id="done-btn">Done</button>
+        </div>
+
+        <div id="button-div">
+            <button type="button" id="add-btn">+</button>
+        </div>
+
+        <button type="button" id="clear-completed-btn">Clear Completed</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

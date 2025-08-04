@@ -1,0 +1,222 @@
+:root {
+    --light-grey: #E0E0E0;
+    --input-bg: #2A2A2A;
+    --gold: #FFBF00;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: var(--light-grey);
+    background-color: black;  
+}
+.to-do-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 100%;
+    position: relative;
+}
+#default-design {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+.icons {
+    position: relative;
+    height: 80px;
+}
+#list-icon {
+    font-size: 35px;
+    border: 2px solid var(--light-grey);
+    border-bottom: 2px solid lightgray;
+    border-right: 2px solid lightgray;
+    background-color: var(--light-grey);
+    color: black;
+    border-radius: 4px;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+#imaginary-list-icon {
+    border: 2px solid var(--light-grey);
+    padding: 25px;
+    width: 20px;
+    border-radius: 4px;
+    position: relative;
+    background-color: var(--light-grey);
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+}
+
+/* adding tasks design */
+#new-task-input-area {
+    display: none;
+    background-color: var(--input-bg);
+    border-radius: 13px;
+    padding: 30px 25px;
+    height: 170px;
+    margin-top: 200px;
+    width: 95%;
+    max-width: 500px;
+    position: relative;
+    cursor: pointer;
+}
+#input-area-icon {
+    font-size: 25px;
+}
+.just-icons {
+    display: flex;
+    gap: 10px; 
+}
+#text-input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    caret-color: var(--gold);
+    color: var(--gold);
+    height: 25px;
+}
+#text-input:active {
+    outline: none;
+    background-color: transparent;
+}
+#done-btn {
+    color: var(--light-grey);
+    font-weight: bold;
+    opacity: 0.6;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+#button-div {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+#add-btn {
+    background-color: var(--gold);
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+    
+}
+#list-items { /*ul item*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin: 5px auto;
+    list-style: none;
+    padding: 0;
+}
+.task-item {
+    background-color: var(--input-bg);
+    border-radius: 13px;
+    padding: 20px 15px;
+    min-height: 50px;
+    width: 95%;
+    max-width: 500px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.task-text {
+    /* flex-grow: 1; */
+    padding: 2px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+.task-edit-input {
+   flex-grow: 1;
+   padding: 8px;
+   border: 1px solid var(--gold);
+   border-radius: 4px;
+   background-color: var(--input-bg);
+   color: white;
+   outline: none;
+   display: none;
+   font-size: 16px;
+}
+.task-actions {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0; /* Prevent action buttons from shrinking */
+}
+.delete-task-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+.delete-task-btn:hover {
+    background-color: #c82333;
+}
+.hidden-checkbox-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+.task-complete-icon {
+    font-size: 24px;
+    color: var(--light-grey);
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    flex-shrink: 0;
+    line-height: 1;
+}
+.task-checkbox-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+#clear-completed-btn {
+    display: none;
+    background-color: transparent;
+    color: var(--light-grey);
+    border: 2px solid var(--light-grey);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-top: 20px;
+}
+
+#clear-completed-btn:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+}
